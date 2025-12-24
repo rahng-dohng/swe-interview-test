@@ -8,6 +8,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -61,6 +63,13 @@ const ProductList = () => {
       >
         {products.map((product) => (
           <Card key={product.id} sx={{ width: 280, position: "relative" }}>
+            <IconButton
+              aria-label="delete"
+              onClick={() => handleDelete(product.id)}
+              sx={{ position: "absolute", top: 4, right: 4, zIndex: 1 }}
+            >
+              <DeleteIcon />
+            </IconButton>
             <CardContent>
               <Typography>{product.name}</Typography>
             </CardContent>
