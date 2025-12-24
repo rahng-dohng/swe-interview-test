@@ -1,4 +1,5 @@
 ## How to Run the Project
+Run backend first, then frontend. If you see CORS errors, confirm backend is on 5000. Test delete: click trash icon, refresh page if it show updated list immediately.
 
 ### Backend
 ```bash
